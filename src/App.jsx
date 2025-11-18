@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/page/Home";
 import "../src/index.css"
-import Service from "./page/Service";
+import Service from "../src/page/Service";
 import Tracking from "../src/page/Tracking";
 
 

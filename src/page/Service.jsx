@@ -1,3 +1,6 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 export default function service() {
   const services = [
     {
@@ -18,30 +21,30 @@ export default function service() {
     },
   ];
 
-  return (
-    <div className="bg-[#F3C9A6] min-h-screen flex flex-col pt-20">
+  return (<div>
+     <Navbar/>
+    <div className="bg-[#a8a19b] min-h-screen flex flex-col pt-20">
       <header className="text-center mb-8">
+        
         <h1 className="text-4xl font-bold mb-2">Our Services</h1>
         <p className="text-lg text-gray-800">
           Explore the solutions we offer to help your business succeed.
         </p>
       </header>
 
-      <main className="flex-grow container mx-auto px-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <main className="flex-grow container mx-auto px-12 mb-8 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-md p-12 hover:shadow-xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-700">{service.description}</p>
           </div>
         ))}
       </main>
-
-      <footer className="bg-[#F3C9A6] shadow-inner p-4 text-center text-black mt-8">
-        &copy; 2025 FirstAccessLogistics. All rights reserved.
-      </footer>
+     <Footer/>
+    </div>
     </div>
   );
 }
