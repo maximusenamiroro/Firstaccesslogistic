@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/page/Home";
 import "../src/index.css"
+import Service from "./page/Service";
 import Tracking from "../src/page/Tracking";
+
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/service" element={<Service />} />
         <Route path="/tracking/:id" element={<Tracking />} />
       </Routes>
     </Router>
