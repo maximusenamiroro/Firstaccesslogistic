@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Bacground from "../assets/image/Detailsbackground.png"
 
 export default function service() {
   const services = [
@@ -23,10 +24,11 @@ export default function service() {
 
   return (<div>
      <Navbar/>
-    <div className="bg-[#a8a19b] min-h-screen flex flex-col pt-20">
+    <div className="flex flex-col items-center px-4 py-12 w-full min-h-screen bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${Bacground})` }}>
       <header className="text-center mb-8">
         
-        <h1 className="text-4xl font-bold mb-2">Our Services</h1>
+        <h1 className="text-4xl font-bold mt-21 mb-2">Our Services</h1>
         <p className="text-lg text-gray-800">
           Explore the solutions we offer to help your business succeed.
         </p>
@@ -43,8 +45,9 @@ export default function service() {
           </div>
         ))}
       </main>
-     <Footer/>
+     
     </div>
+    <Footer/>
     </div>
   );
 }
