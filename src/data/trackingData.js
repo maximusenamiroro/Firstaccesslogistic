@@ -1,5 +1,6 @@
 const trackingData = {
     "123456": {
+      RecieverName: "Julia Kate",
       currentLocation: "Paris, France 🇫🇷",
       status: "In Transit",
       nextStop: "London, UK 🇬🇧",

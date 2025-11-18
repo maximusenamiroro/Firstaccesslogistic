@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import trackingData from "../data/trackingData"; // Import tracking data
+import Bacground from "../assets/image/Detailsbackground.png"
+
 
 export default function Home() {
   const [trackingCode, setTrackingCode] = useState("");
@@ -26,16 +28,19 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center text-center py-14 px-4 bg-blue-600 text-white">
-        <h1 className="text-4xl font-bold mb-4">Fast & Reliable Logistics</h1>
+      <div className="flex flex-col items-center justify-center text-center py-14 px-4 bg-[#5A3A23] text-white">
+        <h1 className="text-4xl font-bold mt-12 mb-4">Fast & Reliable Logistics</h1>
         <p className="text-lg max-w-xl">
           Track your package easily and enjoy fast delivery services with FirstAccessLogistics.
         </p>
       </div>
 
       {/* Tracking Section */}
-      <div className="flex flex-col items-center mt-10 px-4 py-12">
-        <h2 className="text-2xl font-bold mb-4">Track Your Package</h2>
+       <div
+      className="flex flex-col items-center px-4 py-12 w-full min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${Bacground})` }}
+    >
+        <h2 className="text-3xl font-bold mt-24 mb-4 text-[#103248]">Track Your Package</h2>
         <form onSubmit={handleSubmit} className="bg-white p-6 shadow-lg rounded-lg w-full max-w-md">
           <input
             type="text"
@@ -54,8 +59,9 @@ export default function Home() {
 
         {/* Display Tracking Result */}
         {trackingInfo && (
-          <div className="mt-6 p-6 bg-white shadow-lg rounded-lg w-full max-w-md">
+          <div className="mt-6 p-6 bg-white shadow-lg rounded-lg w-full max-w-md ">
             <h3 className="text-xl font-bold mb-2">Tracking Details</h3>
+            <p><strong>Recievers Name:</strong> {trackingInfo.RecieverName}</p>
             <p><strong>Current Location:</strong> {trackingInfo.currentLocation}</p>
             <p><strong>Status:</strong> {trackingInfo.status}</p>
             <p><strong>Next Stop:</strong> {trackingInfo.nextStop}</p>

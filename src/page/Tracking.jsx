@@ -28,7 +28,7 @@ export default function Tracking() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600">Track Your Package</h1>
+      <h1 className="text-6xl font-bold mb-6 text-blue-600">Track Your Package</h1>
       
       <form onSubmit={handleSubmit} className="bg-white p-6 shadow-lg rounded-lg w-80">
         <input
@@ -50,6 +50,7 @@ export default function Tracking() {
       {trackingResult && (
         <div className="mt-4 bg-white p-4 shadow rounded-lg w-80">
           <h2 className="text-xl font-bold text-gray-800">Tracking Details</h2>
+          <p><strong>Reciever Name:</strong> {trackingResult.RecieverName}</p>
           <p><strong>Current Location:</strong> {trackingResult.currentLocation}</p>
           <p><strong>Status:</strong> {trackingResult.status}</p>
           <p><strong>Next Stop:</strong> {trackingResult.nextStop}</p>
