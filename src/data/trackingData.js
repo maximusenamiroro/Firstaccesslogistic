@@ -9,7 +9,7 @@ const trackingData = {
 
     currentLocation: "Summerfield, FL 🇺🇸",
     status: "In transit",
-    nextStop: "Jacksonville, FL 🇺🇸",
+    nextStop: "Reciever Doorstep",
     eta: "Thu, 20 Nov 2025",
     lastUpdated: "Today • 10:42 AM",
 
