@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
       <footer className="bg-[#F3C9A6] text-white">
-        <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold text-[#4A3A32]">FirstAccessLogistics</h2>
@@ -22,12 +22,7 @@ export default function Footer() {
           </div>
   
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg text-[#4A3A32] font-semibold">Contact Us</h3>
-            <p className="mt-2 text-[#4A3A32]">📍 123 Logistics Street, Lagos, Nigeria</p>
-            <p className="text-[#4A3A32]">📧 support@firstaccesslogistics.com</p>
-            <p className="text-[#4A3A32]">📞 +234 800 123 4567</p>
-          </div>
+         
         </div>
   
         {/* Copyright Section */}
